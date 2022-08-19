@@ -30,6 +30,7 @@ let bikeObject = {
 
 function displayService(object) {
     const mainSection = document.getElementById('main-section');
+    const stringifiedObj = JSON.stringify(object);
     const div = document.createElement('div');
     div.innerHTML = `
     
@@ -44,7 +45,9 @@ function displayService(object) {
                         <h6 class="card-title">Brand Name: ${object.Brand}</h6>
                         <p class="card-text">${object.description}</p>
                         <p class="card-text">Fare Per Kilo: ${object.farePerKilo}  Capacity: ${object.capacity}</p>
-                        <button class="btn btn-primary" type="submit">Book Now</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" onclick='handleBooking(${stringifiedObj})' data-bs-target="#exampleModal">
+                         Book Now </button>
+                                            
                     </div>
                 </div>
             </div>
@@ -60,3 +63,23 @@ function displayService(object) {
 displayService(carObject);
 displayService(busObject);
 displayService(bikeObject);
+
+function handleBooking(object) {
+    const modalBody = document.getElementById('modal-body');
+    modalBody.innerHTML = `
+    <div class="card mx-auto" style="width: 18rem;">
+  <img src=${object.imageUrl} class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title"> Vehical Mood: ${object.vehical}</h5>
+        <h6 class="card-title">Brand Name: ${object.Brand}</h6>
+        <p class="card-text">Fare Per Kilo: ${object.farePerKilo}  Capacity: ${object.capacity}</p>
+        <div class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+            <input class="form-control me-2" type="search" placeholder="" aria-label="Search">
+            <button class="btn btn-success" type="submit">Submit</button>
+        </div>
+  </div>
+</div>
+    
+    `
+}
