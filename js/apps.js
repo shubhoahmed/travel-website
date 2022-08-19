@@ -20,7 +20,7 @@ let busObject = {
 
 let bikeObject = {
     vehical: 'Bike',
-    Brand: 'Suzuki',
+    Brand: 'Honda',
     imageUrl: "https://images.unsplash.com/photo-1608461688104-304d5fe60da1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
 
     farePerKilo: 2,
@@ -41,6 +41,7 @@ function displayService(object) {
                 <div class="col-md-8">
                     <div class="card-body">
                         <h5 class="card-title">${object.vehical}</h5>
+                        <h6 class="card-title">Brand Name: ${object.Brand}</h6>
                         <p class="card-text">${object.description}</p>
                         <p class="card-text">Fare Per Kilo: ${object.farePerKilo}</p>
                         <p class="card-text">Capacity: ${object.capacity}</p>
