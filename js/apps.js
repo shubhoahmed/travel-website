@@ -15,7 +15,7 @@ let busObject = {
 
     farePerKilo: 2.5,
     capacity: 35,
-    description: "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble."
+    description: "On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment."
 }
 
 let bikeObject = {
@@ -25,7 +25,7 @@ let bikeObject = {
 
     farePerKilo: 2,
     capacity: 2,
-    description: " Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy."
+    description: " Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for."
 }
 
 function displayService(object) {
@@ -43,8 +43,8 @@ function displayService(object) {
                         <h5 class="card-title">${object.vehical}</h5>
                         <h6 class="card-title">Brand Name: ${object.Brand}</h6>
                         <p class="card-text">${object.description}</p>
-                        <p class="card-text">Fare Per Kilo: ${object.farePerKilo}</p>
-                        <p class="card-text">Capacity: ${object.capacity}</p>
+                        <p class="card-text">Fare Per Kilo: ${object.farePerKilo}  Capacity: ${object.capacity}</p>
+                        <button class="btn btn-primary" type="submit">Book Now</button>
                     </div>
                 </div>
             </div>
